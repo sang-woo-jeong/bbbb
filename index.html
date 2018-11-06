@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Prototype</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <style>
+      * {margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif;}
+      ul,ol {list-style:none;}
+      li {display:inline-block;}
+      span {color:#52b284;}
+      #grid {position:fixed; opacity:0;}
+      header {width:100%; height:4vh; position:fixed; z-index:99;}
+      nav {width:inherit; height:inherit;
+           position:absolute; left:50%; transform:translate(-50%);
+          font-size:2vh; overflow:hidden;
+          transition:opacity .5s ease;
+          background:rgba(239,232,232,.6);
+          }
+
+      nav .logo {width:1.5vw; height:1.5vw; background:black;
+                 position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+                }
+      nav ol,ul {position:absolute; top:50%; transform:translate(0%,-50%);}
+      nav ol { left:10vh; }
+      nav ul { right:10vh;}
+      nav ol li {margin-right:2vh;}
+      nav ul li {margin-left:2.5vh;}
+      nav ul li:hover {color:orange;}
+      section {width:100%; height:100vh; position:relative;}
+      .sec1 .i1 {width:41.7vw;
+                 position:absolute; top:18.5vh; left:8.3vw;}
+      .sec1 .dt {transform:rotateZ(-90deg); width:10vw;
+                 position:absolute; left:.5vw; top:75vh; font-size:1.5vw;}
+      .sec1 .dt2 {position:absolute; top:11vh; left:93vw; font-size:1.5vw;}
+      .sec1 #deco {position:absolute; left:5vh; top:7vh;}
+      .sec1 #deco2 {position:absolute; right:3vh; bottom:7vh;}
+      .sec1 #deco3 {position:absolute; right:12vw; top:10vh;}
+      .sec1 #deco4 {position:absolute; left:20vw; bottom:10vh;}
+      .sec1 article {width:40vw; color:#444;
+                     position:absolute; left:50vw; top:34.8vh;}
+      .sec1 article h2 {font-size:2vw; margin-left:-4vw; padding-bottom:1vh; padding-left:1vw; background:white;}
+      .sec1 article p {font-size:1vw; margin-left:3.5vw; margin-top:1.5vh;}
+      .sec2 {background:rgba(239,232,232,.6);}
+      .sec2 .sofa {width:40vw;
+                   position:absolute; right:8.8vw; top:18vh;
+                  }
+      .sec2 #deco {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+      .sec2 #deco2 {position:absolute; left:20%; top:18%; transform:translate(-50%,-50%);}
+      .sec2 article {position:absolute; width:37vw;
+                    top:28vh; left:8.3vw;}
+      .sec2 article h2 {font-size:2vw; padding-bottom:1vh;}
+      .sec2 article p {font-size:1vw; margin-top:1.5vh;}
+      .sec2 .dt {position:absolute; bottom:11vh; left:45vw; font-size:1.5vw;}
+      .sec2 .dt2 {position:absolute; top:11vh; left:48vw; font-size:1.5vw;}
+    </style>
+  </head>
+  <body>
+    <img src="g.png" id="grid">
+    <header>
+      <nav>
+        <ol>
+          <li><i class="fa fa-facebook-square"></i></li>
+          <li><i class="fa fa-instagram"></i></li>
+          <li><i class="fa fa-behance-square"></i></li>
+        </ol>
+        <div class="logo"></div>
+        <ul>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+          <li>menu</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="sec1">
+      <div class="dt">Our Service</div>
+      <div class="dt2">.01</div>
+      <svg id="deco"
+      	 width="60vh" height="60vh" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+      <polyline style="fill:none;stroke:#A5A5A5;stroke-width:2.8346;stroke-miterlimit:10;" points="57.143,542.857 57.143,57.144 542.857,57.144 "/>
+      </svg>
+      <svg id="deco2" x="0px" y="0px"
+      	 width="60vh" height="60vh" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+      <polyline style="fill:none;stroke:#A5A5A5;stroke-width:2.8346;stroke-miterlimit:10;" points="542.857,57.144 542.857,542.857
+      	57.143,542.857 "/>
+      </svg>
+      <svg version="1.1" id="deco3" x="0px" y="0px"
+      	 width="15vw" height="10vw" viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+      <circle style="fill:#EFE8E8;" cx="150" cy="100" r="34.584"/>
+      <circle style="fill:#EFE8E8;" cx="221.006" cy="100" r="19.648"/>
+      <circle style="fill:#EFE8E8;" cx="268.008" cy="100" r="10.558"/>
+      <circle style="fill:#EFE8E8;" cx="78.994" cy="100" r="19.648"/>
+      <circle style="fill:#EFE8E8;" cx="31.992" cy="100" r="10.558"/>
+      </svg>
+      <svg version="1.1" id="deco4" x="0px" y="0px"
+      	 width="15vw" height="10vw" viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+      <circle style="fill:#EFE8E8;" cx="150" cy="100" r="34.584"/>
+      <circle style="fill:#EFE8E8;" cx="221.006" cy="100" r="19.648"/>
+      <circle style="fill:#EFE8E8;" cx="268.008" cy="100" r="10.558"/>
+      <circle style="fill:#EFE8E8;" cx="78.994" cy="100" r="19.648"/>
+      <circle style="fill:#EFE8E8;" cx="31.992" cy="100" r="10.558"/>
+      </svg>
+
+      <img src="1.jpg" class="i1">
+      <article>
+        <h2>이웃 소통 서비스 <span>이웃기웃</span></h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged.<br/><br/>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type
+          specimen book. It has survived not only five centuries,
+        </p>
+      </article>
+    </section>
+    <section class="sec2">
+      <svg id="deco" x="0px" y="0px"
+      	 width="600px" height="600px" viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+      <line style="fill:none;stroke:#A5A5A5;stroke-width:2.8346;stroke-miterlimit:10;" x1="300" y1="575.441" x2="300" y2="24.559"/>
+      </svg>
+      <svg version="1.1" id="deco2" x="0px" y="0px"
+      	 width="15vw" height="10vw" viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+      <circle style="fill:white;" cx="150" cy="100" r="34.584"/>
+      <circle style="fill:white;" cx="221.006" cy="100" r="19.648"/>
+      <circle style="fill:white;" cx="268.008" cy="100" r="10.558"/>
+      <circle style="fill:white;" cx="78.994" cy="100" r="19.648"/>
+      <circle style="fill:white;" cx="31.992" cy="100" r="10.558"/>
+      </svg>
+      <div class="dt">Our Function</div>
+      <div class="dt2">.02</div>
+      <img src="2.png" class="sofa"/>
+      <article>
+        <h2>인테리어를 위한 <span>가상 모델링</span></h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged.<br/><br/>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries,</p>
+      </article>
+    </section>
+  </body>
+</html>
